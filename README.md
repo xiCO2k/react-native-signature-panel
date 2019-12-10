@@ -1,6 +1,6 @@
 # react-native-signature-panel
 
-[![npm version](https://badge.fury.io/js/react-native-modal.svg)](https://badge.fury.io/js/react-native-signature-panel)
+[![npm version](https://badge.fury.io/js/react-native-signature-panel.svg)](https://badge.fury.io/js/react-native-signature-panel)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 A React Native signature panel that captures and exports signatures to PNG, JPG or SVG. Works with Expo or Vanilla RN.
