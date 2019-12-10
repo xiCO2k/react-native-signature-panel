@@ -1,2 +1,81 @@
 # react-native-signature-panel
-React Native signature panel that captures and exports signatures PNG, JPG or SVG. Works with Expo or Vanilla RN.
+
+[![npm version](https://badge.fury.io/js/react-native-modal.svg)](https://badge.fury.io/js/react-native-signature-panel)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
+A React Native signature panel that captures and exports signatures to PNG, JPG or SVG. Works with Expo or Vanilla RN.
+
+<p align="center">
+<img src="/.github/images/example-modal.gif" height="500" />
+</p>
+
+## Features
+
+- Smooth enter/exit animations
+- Plain simple and flexible APIs
+- Customizable backdrop opacity, color and timing
+- Listeners for the modal animations ending
+- Resize itself correctly on device rotation
+- Swipeable
+- Scrollable
+
+## Setup
+
+This library is available on npm, install it with: `npm i react-native-signature-panel` or `yarn add react-native-signature-panel`.
+
+## Dependencies
+
+You will need to install the `'react-native-svg'` and `'react-native-view-shot'`. If you are working with Expo, you will should use the `'expo install'` method. If vanilla RN, then follow the usual instructions to add and link these libs. 
+
+## Usage
+
+1.  Import react-native-signature-panel:
+
+```javascript
+import Signature from 'react-native-signature-panel';
+```
+
+2.  Use the component with its defaults
+
+```javascript
+render () {
+    return (
+			<Signature
+				onFingerUp={signature => console.log(signature)}
+			/>
+    )
+  }
+```
+
+## Notes
+
+The onFingerUp method is triggered each time the user takes their finger off the pad. The 'signature' value is then updated each time. This allows for multiple strokes to be added to the image without the need for a seperate 'finished' button within the component. Note that when using an image format other than SVG, there will be temp image files building up on the device. Be sure to put a process in place to remove these once you have done whatever is it you need to do with the final image. You could push the responses into an array, take the last one and process it, then use RN file system to clear the lot. 
+
+You may want to set a slight offset to the touch-point using the x or y offset props. Through personal use, I have found that a yOffset of -60 is often reqired. 
+
+## Available props
+
+| Name                           | Type             | Default                 | Description                                                                                                                                |
+| ------------------------------ | ---------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| height                         | string or number | 300                     | Height of the signature panel                                                                                                                       |
+| width                          | string or number | '100%'                  | Width of the signature panel                                                                                                |
+| offsetX                        | number           | 0                       | X offset of the finger touch point                                                                                                                      |
+| offsetY                        | number           | 0                       | Y offset of the finger touch point 
+|
+| strokeColor                    | number           | '#000'                  | Stroke color
+|
+| strokeWidth                    | string           | 3                       | Stroke width 
+|
+| imageOutputSize                | number           | 480                     | Size of image output (non SVG)
+|
+| imageQuality                   | number           | 1                       | Image output quality, 0.1 to 1
+|
+| imageFormat                    | string           | 'png'                   | Image output type ['png', 'jpg', 'svg] 
+|
+| outputType                     | string           | 'tmpfile'               | Output ['tmpFile', 'base64', 'data-uri'] 
+|
+| onFingerUp                     | function         | () => {}                | Callback with the image value 
+
+## That's it :)
+
+Pull requests, feedbacks and suggestions are welcome! Any issues, please let me know. 
