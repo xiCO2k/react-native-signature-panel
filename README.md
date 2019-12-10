@@ -7,13 +7,9 @@ A React Native signature panel that captures and exports signatures to PNG, JPG 
 
 ## Features
 
-- Smooth enter/exit animations
-- Plain simple and flexible APIs
-- Customizable backdrop opacity, color and timing
-- Listeners for the modal animations ending
-- Resize itself correctly on device rotation
-- Swipeable
-- Scrollable
+- Works with Expo or Vanilla RN
+- Export signature as SVG, PNG or JPG
+- Customizable width, height, theming etc.
 
 ## Setup
 
@@ -62,6 +58,7 @@ You may want to set a slight offset to the touch-point using the x or y offset p
 | imageFormat                    | string           | 'png'                   | Image output type ['png', 'jpg', 'svg]                                                                                                                    |
 | outputType                     | string           | 'tmpfile'               | Output ['tmpFile', 'base64', 'data-uri']                                                                                                                 |
 | onFingerUp                     | function         | () => {}                | Callback with the image value                                                                                        |
+| containerStyle                 | object           | {}                      | Style the signature container     
 
 ## That's it :)
 
