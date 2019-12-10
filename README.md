@@ -5,10 +5,6 @@
 
 A React Native signature panel that captures and exports signatures to PNG, JPG or SVG. Works with Expo or Vanilla RN.
 
-<p align="center">
-<img src="/.github/images/example-modal.gif" height="500" />
-</p>
-
 ## Features
 
 - Smooth enter/exit animations
@@ -59,8 +55,8 @@ You may want to set a slight offset to the touch-point using the x or y offset p
 | width                          | string or number | '100%'                  | Width of the signature panel                                                                                                |
 | offsetX                        | number           | 0                       | X offset of the finger touch point                                                                                                                      |
 | offsetY                        | number           | 0                       | Y offset of the finger touch point                                                                                                                 |
-| strokeColor                    | number           | '#000'                  | Stroke color                                                                                          |
-| strokeWidth                    | string           | 3                       | Stroke width                                                                                                                  |
+| strokeColor                    | string           | '#000'                  | Stroke color                                                                                          |
+| strokeWidth                    | number           | 3                       | Stroke width                                                                                                                  |
 | imageOutputSize                | number           | 480                     | Size of image output (non SVG)                                                                                                                    |
 | imageQuality                   | number           | 1                       | Image output quality, 0.1 to 1                                                                                           |
 | imageFormat                    | string           | 'png'                   | Image output type ['png', 'jpg', 'svg]                                                                                                                    |
