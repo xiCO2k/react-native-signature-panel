@@ -40,9 +40,7 @@ import Signature from 'react-native-signature-panel';
 ```javascript
 render () {
     return (
-			<Signature
-				onFingerUp={signature => console.log(signature)}
-			/>
+	<Signature onFingerUp={signature => console.log(signature)}/>
     )
   }
 ```
@@ -60,21 +58,14 @@ You may want to set a slight offset to the touch-point using the x or y offset p
 | height                         | string or number | 300                     | Height of the signature panel                                                                                                                       |
 | width                          | string or number | '100%'                  | Width of the signature panel                                                                                                |
 | offsetX                        | number           | 0                       | X offset of the finger touch point                                                                                                                      |
-| offsetY                        | number           | 0                       | Y offset of the finger touch point 
-|
-| strokeColor                    | number           | '#000'                  | Stroke color
-|
-| strokeWidth                    | string           | 3                       | Stroke width 
-|
-| imageOutputSize                | number           | 480                     | Size of image output (non SVG)
-|
-| imageQuality                   | number           | 1                       | Image output quality, 0.1 to 1
-|
-| imageFormat                    | string           | 'png'                   | Image output type ['png', 'jpg', 'svg] 
-|
-| outputType                     | string           | 'tmpfile'               | Output ['tmpFile', 'base64', 'data-uri'] 
-|
-| onFingerUp                     | function         | () => {}                | Callback with the image value 
+| offsetY                        | number           | 0                       | Y offset of the finger touch point                                                                                                                 |
+| strokeColor                    | number           | '#000'                  | Stroke color                                                                                          |
+| strokeWidth                    | string           | 3                       | Stroke width                                                                                                                  |
+| imageOutputSize                | number           | 480                     | Size of image output (non SVG)                                                                                                                    |
+| imageQuality                   | number           | 1                       | Image output quality, 0.1 to 1                                                                                           |
+| imageFormat                    | string           | 'png'                   | Image output type ['png', 'jpg', 'svg]                                                                                                                    |
+| outputType                     | string           | 'tmpfile'               | Output ['tmpFile', 'base64', 'data-uri']                                                                                                                 |
+| onFingerUp                     | function         | () => {}                | Callback with the image value                                                                                        |
 
 ## That's it :)
 
