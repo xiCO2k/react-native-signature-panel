@@ -1,0 +1,40 @@
+{
+	"name": "react-native-signature-panel",
+	"version": "1.0.0",
+	"description": "React Native signature panel that captures and exports signatures PNG, JPG or SVG. Works with Expo or Vanilla RN.",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/edanedison/react-native-signature-panel.git"
+	},
+	"keywords": [
+		"react",  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+		"native",
+		"signature",
+		"capture",
+		"panel",
+		"pad",
+		"expo"
+	],
+	"author": "Edan Edison",
+	"license": "GNU",
+	"bugs": {
+		"url": "https://github.com/edanedison/react-native-signature-panel/issues"
+	},
+  "homepage": "https://github.com/edanedison/react-native-signature-panel#readme",
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react-native-svg": "^9.9.5",
+    "react-native-view-shot": "^2.6.0"  
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }  
+}
