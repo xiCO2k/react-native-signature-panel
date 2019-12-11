@@ -1,6 +1,6 @@
 {
 	"name": "react-native-signature-panel",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "React Native signature panel that captures and exports signatures PNG, JPG or SVG. Works with Expo or Vanilla RN.",
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
@@ -44,10 +44,6 @@
 		"tslint-eslint-rules": "^5.4.0",
 		"tslint-react": "^4.1.0",
 		"typescript": "^3.7.3"
-	},
-	"peerDependencies": {
-		"react": "*",
-		"react-native": "*"
 	},
 	"files": [
 		"lib/**/*"
