@@ -1,18 +1,24 @@
 {
 	"name": "react-native-signature-panel",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "React Native signature panel that captures and exports signatures PNG, JPG or SVG. Works with Expo or Vanilla RN.",
-	"main": "dist/index.js",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "tsc",
+		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+		"lint": "tslint -p tsconfig.json",
+		"prepare": "yarn build",
+		"preversion": "yarn lint",
+		"version": "yarn format && git add -A src",
+		"postversion": "git push && git push --tags"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/edanedison/react-native-signature-panel.git"
 	},
 	"keywords": [
-		"react",  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+		"react",
 		"native",
 		"signature",
 		"capture",
@@ -21,20 +27,36 @@
 		"expo"
 	],
 	"author": "Edan Edison",
-	"license": "GNU",
+	"license": "GPL-3.0-or-later",
 	"bugs": {
 		"url": "https://github.com/edanedison/react-native-signature-panel/issues"
 	},
-  "homepage": "https://github.com/edanedison/react-native-signature-panel#readme",
-  "dependencies": {
-    "prop-types": "^15.6.2",
-    "react-native-svg": "^9.9.5",
-    "react-native-view-shot": "^2.6.0"  
-  },
-  "devDependencies": {
-  },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  }  
+	"homepage": "https://github.com/edanedison/react-native-signature-panel#readme",
+	"dependencies": {
+		"@types/jest": "^24.0.23",
+		"@types/react-test-renderer": "^16.9.1",
+		"prop-types": "^15.6.2",
+		"react-native-svg": "^9.9.5",
+		"react-native-view-shot": "^2.6.0"
+	},
+	"devDependencies": {
+		"@types/core-js": "^2.5.2",
+		"@types/react": "^16.9.16",
+		"@types/react-native": "^0.60.25",
+		"jest": "^24.9.0",
+		"react-test-renderer": "^16.12.0",
+		"ts-jest": "^24.2.0",
+		"tslint": "^5.20.1",
+		"tslint-config-prettier": "^1.18.0",
+		"tslint-eslint-rules": "^5.4.0",
+		"tslint-react": "^4.1.0",
+		"typescript": "^3.7.3"
+	},
+	"peerDependencies": {
+		"react": "*",
+		"react-native": "*"
+	},
+	"files": [
+		"lib/**/*"
+	]
 }

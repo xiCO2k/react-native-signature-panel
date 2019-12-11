@@ -1,0 +1,17 @@
+{
+	"extends": ["tslint:recommended", "tslint-eslint-rules", "tslint-react", "tslint-config-prettier"],
+	"jsRules": {},
+	"rules": {
+		"interface-name": false,
+		"jsx-no-lambda": true,
+		"object-literal-sort-keys": true,
+		"import-sources-order": false,
+		"ordered-imports": false,
+		"import-name": [false],
+		"comment-format": [true, "check-space"],
+		"indent": [true, "tabs", 4],
+		"no-empty": [true, "allow-empty-functions"],
+		"variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
+		"quotemark": [true, "single", "jsx-double"]
+	}
+}

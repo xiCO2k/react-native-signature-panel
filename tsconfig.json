@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"jsx": "react-native",
+		"lib": ["es6", "dom", "es2017"],
+		"target": "es5",
+		"strictNullChecks": false,
+		"declaration": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"outDir": "./lib",
+		"strict": true
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "**/__tests__/*"]
+}
