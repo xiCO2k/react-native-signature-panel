@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import * as React from 'react';
 import {
 	View,
 	PanResponder,
@@ -33,7 +33,7 @@ interface SignaturePanelState {
 	posY: number;
 }
 
-class SignaturePanel extends Component<SignaturePanelProps, SignaturePanelState> {
+class SignaturePanel extends React.Component<SignaturePanelProps, SignaturePanelState> {
 	public static defaultProps: SignaturePanelProps = {
 		height: 300,
 		imageFormat: 'png',
@@ -153,7 +153,7 @@ class SignaturePanel extends Component<SignaturePanelProps, SignaturePanelState>
 			<Svg style={styles.pad} width={width} height={height}>
 				<G>
 					{paths.map((path, i) => {
-						return <Fragment key={`path-${i}`}>{path}</Fragment>;
+						return <React.Fragment key={`path-${i}`}>{path}</React.Fragment>;
 					})}
 					<Path d={this.plotToSvg(points)} stroke={strokeColor} strokeWidth={strokeWidth} fill="none" />
 				</G>
