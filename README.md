@@ -17,7 +17,7 @@ This library is available on npm, install it with: `npm i react-native-signature
 
 ## Dependencies
 
-You will need to install the `'react-native-svg'` and `'react-native-view-shot'`. If you are working with Expo, you will should use the `'expo install'` method. If vanilla RN, then follow the usual instructions to add and link these libs. 
+You will need to install the `'react-native-svg'` and `'react-native-view-shot'`. If you are working with Expo, you should use the `'expo install'` method. If vanilla RN, then follow the usual instructions to add and link these libs. 
 
 ## Usage
 
@@ -39,7 +39,7 @@ render () {
 
 ## Notes
 
-The onFingerUp method is triggered each time the user takes their finger off the pad. The 'signature' value is then updated each time. This allows for multiple strokes to be added to the image without the need for a seperate 'finished' button within the component. Note that when using an image format other than SVG, there will be temp image files building up on the device. Be sure to put a process in place to remove these once you have done whatever is it you need to do with the final image. You could push the responses into an array, take the last one and process it, then use RN file system to clear the lot. 
+The onFingerUp method is triggered each time the user takes their finger off the pad. The 'signature' image data is then updated after a 1000ms delay. This allows for multiple strokes to be made without it creating a load of junk images. Note that when using an image format other than SVG, there will be temp image files building up on the device. Be sure to put a process in place to remove these once you have done whatever is it you need to do with the final image. You could push the responses into an array, take the last one and process it, then use RN file system to clear the lot. 
 
 You may want to set a slight offset to the touch-point using the x or y offset props. Through personal use, I have found that a yOffset of -60 is often reqired. 
 
