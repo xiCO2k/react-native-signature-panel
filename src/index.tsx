@@ -178,8 +178,6 @@ class SignaturePanel extends React.Component<SignaturePanelProps, SignaturePanel
 
 	/**
 	 * Creates a snapshot image from the view container
-	 * @param {SignaturePanelProps['imageFormat']} imageFormat
-	 * @param {SignaturePanelProps['onFingerUp']} onFingerUp
 	 * @param {Array} paths
 	 * @param {Array} points	 *
 	 * @return {SignaturePanelProps['onFingerUp']}*
