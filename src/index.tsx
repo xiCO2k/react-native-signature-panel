@@ -88,6 +88,20 @@ class SignaturePanel extends React.Component<SignaturePanelProps, SignaturePanel
 	}
 
 	/**
+	 * Resets the signature pad container
+	 * @param {GestureResponderEvent} e Event
+	 * @public
+	 */
+	public reset() {
+		this.setState({
+			paths: [],
+			points: [],
+			posX: 0,
+			posY: 0
+		});
+	}
+
+	/**
 	 * Detect the touch start and move events on the signature pad
 	 * @param {GestureResponderEvent} e Event
 	 * @private
